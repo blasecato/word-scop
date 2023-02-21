@@ -1,0 +1,398 @@
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<style>
+	body,
+	html,
+	h1,
+	p,
+	span,
+	h2,
+	h3,
+	a,
+	h4,
+	h5 {
+		padding: 0;
+		margin: 0;
+	}
+
+	.header {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		padding: 30px;
+		max-width: 1800px;
+		margin: 0 auto;
+	}
+
+	/* .video {
+		padding: 0 30px;
+	} */
+
+	.container {
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	.box-head {
+		min-width: 500px;
+	}
+
+	.tapa {
+		width: 85px;
+		height: auto;
+	}
+
+	.title,
+	.title2>h1 {
+		font-family: PPNeueMontreal-Light;
+		font-size: 38px;
+		font-weight: 400;
+		color: #000000;
+	}
+
+	.title2>h1 {
+		width: 100%;
+		margin: 0 auto;
+		font-size: 35px;
+	}
+
+	.title2 {
+		margin-bottom: 26px;
+		padding: 0 30px;
+		display: flex;
+		justify-content: center;
+	}
+
+	.paragraph {
+		font-family: PPNeueMontreal-Book;
+		font-size: 35px;
+		font-weight: 400;
+		color: #000000;
+		max-width: 800px;
+	}
+
+	.content {
+		padding: 30px;
+		max-width: 1800px;
+		margin: 0 auto;
+	}
+
+	iframe {
+		width: 100%;
+		height: calc(100vh - 150px);
+		box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+	}
+
+	.footer {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		padding: 30px 0px;
+		padding-top: 120px;
+	}
+
+	.link {
+		font-family: PPNeueMontreal-Light;
+		font-size: 20px;
+		font-weight: 400;
+		color: #000000;
+		text-decoration: underline;
+		margin-top: 5px;
+	}
+
+	.link-net {
+		font-size: 33px;
+	}
+
+	.link-net:hover,
+	.link:hover {
+		text-decoration: none;
+	}
+
+	.footer-box {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: flex-start;
+	}
+
+	.sub-title,
+	.sub-medium {
+		margin-top: 30px;
+		font-family: PPNeueMontreal-Medium;
+		font-size: 20px;
+		font-weight: 400;
+		color: #000000;
+	}
+
+	.sub-title:first-child,
+	.sub-medium:first-child {
+		margin-top: 0px;
+	}
+
+	.a {
+		margin-top: 5px;
+		font-family: PPNeueMontreal-Book;
+		font-size: 20px;
+		font-weight: 400;
+		color: #000000;
+		text-decoration: none;
+	}
+
+	@font-face {
+		font-family: PPNeueMontreal-bold;
+		src: url("https://res.cloudinary.com/arepa-tec/raw/upload/v1676404134/sYcop/PPNeueMontreal-Bold_s7cd9q.otf") format("truetype");
+	}
+
+	@font-face {
+		font-family: PPNeueMontreal-Book;
+		src: url("https://res.cloudinary.com/arepa-tec/raw/upload/v1676404134/sYcop/PPNeueMontreal-Book_jcry56.otf") format("truetype");
+	}
+
+	@font-face {
+		font-family: PPNeueMontreal-Light;
+		src: url("https://res.cloudinary.com/arepa-tec/raw/upload/v1676404135/sYcop/PPNeueMontreal-Light_q4cdlv.otf") format("truetype");
+	}
+
+	@font-face {
+		font-family: PPNeueMontreal-Medium;
+		src: url("https://res.cloudinary.com/arepa-tec/raw/upload/v1676404135/sYcop/PPNeueMontreal-Medium_arkp5q.otf") format("truetype");
+	}
+
+	.video-desktop {
+		display: block;
+	}
+
+	.title2 {
+		display: none;
+	}
+
+	.video-mobile {
+		display: none;
+	}
+
+	.footer-box-net2 {
+		display: none;
+	}
+
+	@media (max-width: 1468px) {
+		iframe {
+			height: 768px;
+		}
+	}
+
+	@media (max-width: 1368px) {
+		iframe {
+			height: 723px;
+		}
+	}
+
+	@media (max-width: 1268px) {
+		iframe {
+			height: 666px;
+		}
+	}
+
+	@media (max-width: 1168px) {
+		iframe {
+			height: 610px;
+		}
+	}
+
+	@media (max-width: 1068px) {
+		iframe {
+			height: 570px;
+		}
+	}
+
+	@media (max-width: 768px) {
+		.video-desktop {
+			display: none;
+		}
+
+		.title {
+			display: none;
+		}
+
+		.title2 {
+			display: block;
+		}
+
+		.footer {
+			flex-direction: column;
+			padding-top: 30px;
+		}
+
+		.header {
+			align-items: center;
+			padding-bottom: 10px;
+		}
+
+		.tapa {
+			width: 55px;
+		}
+
+		.paragraph {
+			font-size: 23px;
+		}
+
+		.video-mobile {
+			display: block;
+			margin-top: 10px;
+		}
+
+		iframe {
+			height: 100%;
+		}
+
+		.footer-box-net {
+			display: none;
+		}
+
+		.video {
+			padding: 0;
+		}
+
+		#player {
+			margin: 0;
+			width: 100%;
+		}
+
+		.footer-box-net2 {
+			display: flex;
+		}
+
+		.footer-box {
+			margin-bottom: 20px;
+		}
+	}
+
+	@media (max-width: 400px) {
+		iframe {
+			height: 706px;
+		}
+	}
+
+	.player {
+		max-height: initial !important;
+	}
+</style>
+
+<body>
+	<section class="container">
+		<header class="header">
+			<img src="https://res.cloudinary.com/arepa-tec/image/upload/v1676403990/sYcop/Logo_n4fb3b.svg"
+				class="logo" />
+			<h1 class="box-head title">New website <br /> coming soon(ish)!</h1>
+			<img src="https://res.cloudinary.com/arepa-tec/image/upload/v1676403990/sYcop/tapa_hxkrxu.svg"
+				class="tapa" />
+		</header>
+		<div class="title2">
+			<h1>New website <br /> coming soon(ish)!</h1>
+		</div>
+		<div class="video video-desktop">
+			<div style="padding:56.25% 0 0 0;position:relative;"><iframe id="vimeo-video"
+					src="https://player.vimeo.com/video/795403361?h=ffca89386e&autoplay=1&loop=1&autopause=0&mute=1&embedparameter=value"
+					style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay *"
+					data-ready="true"></iframe>
+			</div>
+		</div>
+		<div class="video video-mobile">
+			<div style="padding:177.78% 0 0 0;position:relative;"><iframe id="vimeo-video2"
+					src="https://player.vimeo.com/video/795403345?h=1d7948e015&autoplay=1&loop=1&portrait=0"
+					style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay"
+					data-ready="true"></iframe>
+			</div>
+		</div>
+		<div class="content">
+			<h3 class="paragraph">S&Co is an international design and branding firm based in Bogotá with more than a
+				decade of
+				experience,
+				moving brands closer to people through meaning, craft and communication.
+			</h3>
+			<footer class="footer">
+				<div class="footer-box footer-box-net">
+					<a href="https://www.instagram.com/siegenco/" target="_blank" class="link link-net">Instagram</a>
+					<a href="https://www.behance.net/OLIVER5b3e?tracking_source=search_projects%7Csiegenthaler"
+						target="_blank" class="link link-net">Behance</a>
+				</div>
+				<div class="footer-box">
+					<p class="sub-title">New Business</p>
+					<a href="mailto:oliver@siegenthaler.co" class="link">oliver@siegenthaler.co</a>
+					<a href="mailto:julian@siegenthaler.co" class="link">julian@siegenthaler.co</a>
+					<p class="sub-title">Management </p>
+					<a href="mailto:paula@siegenthaler.co" class="link">paula@siegenthaler.co</a>
+				</div>
+				<div class="footer-box">
+					<p class="sub-medium">Bogotá</p>
+					<a href="tel:+5717025962" class="a">+5717025962</a>
+					<a href="tel:+57 320 4950305" class="a">+57 320 4950305</a>
+					<p class="a">Carrera 11 # 81-26 of 202</p>
+					<p class="a">110221 Bogotá</p>
+					<p class="a">Colombia</p>
+				</div>
+				<div class="footer-box">
+					<p class="sub-medium">West Palm Beach</p>
+					<p class="a">Camilo Linares</p>
+					<a href="mailto:camilo@salentorganics.com" class="link">camilo@salentorganics.com</a>
+					<p class="sub-medium">Zürich</p>
+					<a href="tel:+ 4176 7013608" class="a">+ 4176 7013608</a>
+					<p class="a">Gerechtigkeitsgasse 25</p>
+					<p class="a">8001 Zürich</p>
+					<p class="a">Switzerland</p>
+					<a href="mailto:oliver@siegenthaler.co" class="link">oliver@siegenthaler.co</a>
+				</div>
+				<div class="footer-box footer-box-net2">
+					<a href="" class="link link-net">Instagram</a>
+					<a href="" class="link link-net">Behance</a>
+				</div>
+			</footer>
+		</div>
+	</section>
+</body>
+<script src="https://player.vimeo.com/api/player.js"></script>
+<script>
+	var iframe = document.getElementById('vimeo-video');
+	var player = new Vimeo.Player(iframe);
+
+	player.ready().then(function () {
+		var volume = 0
+		player.setVolume(volume);
+
+		$('#vimeo-video-play').on('click', function (event) {
+			if (volume > 0) {
+				player.setVolume(1);
+			} else {
+				player.setVolume(1);
+			}
+
+			$('#vimeo-video-play').hide();
+		});
+	});
+
+	var iframe2 = document.getElementById('vimeo-video2');
+	var player2 = new Vimeo.Player(iframe2);
+
+	player2.ready().then(function () {
+		var volume2 = 0
+		player2.setVolume(volume2);
+
+		$('#vimeo-video-play2').on('click', function (event) {
+			if (volume2 > 0) {
+				player2.setVolume(1);
+			} else {
+				player2.setVolume(1);
+			}
+
+			$('#vimeo-video-play2').hide();
+		});
+	});
+</script>
+
+</html>
